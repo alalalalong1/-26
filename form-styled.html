@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/18a1c65550.js" crossorigin="anonymous"></script>
+    <title>form-styled</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            min-width: 350px;
+            background-color: #797d7a;
+        }
+
+        body {
+            padding-top: 15px;
+            font-family: 'Verdana', sans-serif;
+            color: grey;
+        }
+
+
+        h3 {
+            text-align: center;
+            margin: 15px;
+            font-size: 25px;
+        }
+
+        .form {
+            border: 2px solid #5ea7ff;
+            border-radius: 10px;
+            position: relative;
+            margin: 0 auto;
+            width: 557px;
+            background-color: #ffffff;
+        }
+
+        fieldset {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin: 5px 0 5px;
+            font-size: 12px;
+            font-weight: 600;
+            padding-left: 10px;
+        }
+
+        legend {
+            width: 100%;
+            padding: 0;
+            color: #ffffff;
+            background-color: #5ea7ff;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .form-group {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0 15px 10px;
+        }
+
+        .form-group:last-child {
+            border-radius: 0 0 10px 10px;
+        }
+
+        .form-control {
+            display: block;
+            width: 498px;
+            height: 30px;
+            padding: 5px 5px 5px 23px;
+            font-size: 14px;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border: 3px solid #5ea7ff;
+        }
+
+        textarea {
+            width: 503px;
+            height: 100px;
+            max-height: 200px;
+            min-height: 80px;
+            resize: vertical;
+            padding: 0 0 0 23px;
+        }
+
+        .titles-submit {
+            padding: 15px;
+        }
+
+        .button-submit {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .button {
+            width: 35%;
+            height: 45px;
+            background-color: #5ea7ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .answer-name,
+        .answer-email,
+        .answer-phone,
+        .answer-message {
+            position: relative;
+        }
+
+        .fa-user,
+        .fa-envelope,
+        .fa-mobile-alt,
+        .fa-pen {
+            position: absolute;
+            top: 61px;
+            left: 5px;
+            font-size: 17px;
+        }
+
+        .fa-envelope {
+            left: 4px;
+        }
+
+        .fa-mobile-alt {
+            left: 8px;
+        }
+
+        .fa-pen {
+            top: 53px;
+            left: 4px;
+        }
+
+        /* modificator */
+        /* .form-horizont label {
+            display: inline-block;
+            width: 33.3%;
+        }
+
+        .form-horizont input {
+            display: inline-block;
+            width: 38.3%
+        }
+
+        .form-horizont i.fa-user,
+        .form-horizont i.fa-envelope,
+        .fa-mobile-alt {
+            position: absolute;
+            top: 14px;
+            left: 196px;
+            font-size: 17px;
+        }
+
+        .form-horizont i.fa-pen {
+            top: 55px;
+            left: 4px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form class="form form-horizont">
+        <fieldset>
+            <legend>
+                <h3><i class="fas fa-home"></i> Обратная связь</h3>
+            </legend>
+            <div class="form-group">
+                <div class="answer-name" for="nameinput">
+                    <label class="titles-name" for>
+                        <p>Имя</p>
+                    </label>
+                    <input id="nameinput" name="nameinput" type="text" placeholder="Введите Ваше имя"
+                        class="form-control">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="answer-email" for="emailinput">
+                    <label class="titles-email">
+                        <p>E-mail:</p>
+                    </label>
+                    <input id="emailinput" name="emailinput" type="text" placeholder="Введите адрес Вашей почты"
+                        class="form-control email">
+                    <i class="far fa-envelope"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="answer-phone" for="phoneinput">
+                    <label class="titles-phone">
+                        <p>Телефон</p>
+                    </label>
+                    <input id="phoneinput" name="phoneinput" type="text" placeholder="Введите номер телефона"
+                        class="form-control">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="answer-message" for="message">
+                    <label class="titles-message">
+                        <p>Сообщение:</p>
+                    </label>
+                    <textarea id="message" name="message" placeholder="Текст сообщения..."
+                        class="form-control"></textarea>
+                    <i class="fas fa-pen"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="button-submit">
+                    <input id="submit" name="submit" value="Отправить" type="submit" class="button">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
